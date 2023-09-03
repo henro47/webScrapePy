@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Web Scraper</title>
+  </head>
+  <style>
+    body {
+      background-color: #1F2833
+    }
+    .card{
+      margin-top:1rem;
+      margin-bottom: 1rem;
+      padding:  0.8rem,0.8rem,0.8rem,0.8rem;
+      background-color: #C5C6C7
+    }
+    .input-group-text
+    {
+      background-color: #FFCB9A
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-md-auto">
+          <div class="container-fluid">     
+              <div class="card";>
+                  <div class="card-body">
+                    <h5 class="card-title">Web scraper</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">by hfrpotgieter</h6>
+                    <form class="row g-3" action="{% url 'waiting_room' %}"c>
+                      {% csrf_token %}
+                        <div class="col-auto">
+                          <label for="searchinput" class="visually-hidden">Search term</label>
+                          <input type="text" name="searchTerm" class="form-control" id="searchinput" placeholder="term...">
+                        </div>
+                        <div class="col-auto">
+                          <button type="submit" class="btn btn-primary mb-3">Search</button>
+                        </div>
+                      </form>
+                  </div>
+                </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+    <!--Bootstrap bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
